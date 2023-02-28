@@ -31,7 +31,7 @@ export async function main() {
       collateralFactor
     );
     let rc = await tx.wait();
-    console.log(rc.events);
+    // console.log(rc.events);
   }
 }
 

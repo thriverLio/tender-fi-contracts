@@ -24,17 +24,16 @@ async function main() {
 
   // Need oracle deployed first to set on unitroller in DeployProtocol
   await DeployMockOracle();
-
   await DeployProtocol();
   await DeployLens();
   await DeployIrModel();
   await DeployJumpModel(adminWallet);
-
+  
   // Depends on previous deployments
   await DeployCToken();
-
+  
   await SetMockOraclePrice();
-
+  
   // SetCollateralFactor requires the price to be set first
   await SetCollateralFactor();
 }

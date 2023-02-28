@@ -8,6 +8,12 @@ dotenv.config({ path: __dirname + "/.env" });
 
 const config: HardhatUserConfig = {
   networks: {
+    hardhat: {
+      forking: {
+        url: "https://andromeda.metis.io/?owner=1088",
+        blockNumber: 3888376
+      }
+    },
     metis: {
       url: process.env["METIS_RPC"] || "https://andromeda.metis.io/?owner=1088",
       accounts: [process.env["PRIVATE_KEY"]],

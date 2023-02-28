@@ -33,6 +33,7 @@ const verifyContract = async (
   contractAddress: string,
   constructorArgs: any
 ) => {
+  return;  
   await hre.run("verify:verify", {
     contract: contractName,
     address: contractAddress,

@@ -171,6 +171,7 @@ const verifyContract = async (
   contractAddress: string,
   constructorArgs: any
 ) => {
+  return;
   await hre.run("verify:verify", {
     contract: "contracts/CErc20Immutable.sol:CErc20Immutable",
     address: contractAddress,
